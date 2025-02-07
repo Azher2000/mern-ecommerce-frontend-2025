@@ -42,7 +42,11 @@ const Header = ({ user }: PropsType) => {
         </button>
         <dialog open={isOpen}>
           <div>
-            {user.role === "admin" && (
+            {/* {user.role === "admin" && (
+              <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">Admin</Link>
+            )} */}
+
+            {(user.role === "admin" || user.role === "user") && (
               <Link onClick={() => setIsOpen(false)} to="/admin/dashboard">Admin</Link>
             )}
 
